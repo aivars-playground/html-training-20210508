@@ -8,10 +8,18 @@ p {
     border: 10px solid crimson !important;
 }
 
+.something_pre_orange {
+    background-color: orange;
+}
+
 .specific {
     background-color: green;
     color: white;
     border: none !important;
+}
+
+.something_post_orange {
+    background-color: orange;
 }
 
 .post_speciffic {
