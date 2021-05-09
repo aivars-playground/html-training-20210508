@@ -1,0 +1,46 @@
+div {
+    background-color: gray;
+}
+
+div[lang="lv"] {
+    background-color: green;
+}
+
+div.special {
+    color: white;
+}
+
+h3, div[lang="lv"] {
+    border: 1px solid black;
+}
+
+[lang="lv"] {
+    color: red;
+}
+
+.tutorial > p {
+    font-size: x-large;
+}
+
+.blockElem {
+    display: block;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.inlineElem{
+    display: inline;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.inlineBlockElem{
+    display: inline-block;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.withBorder{
+    width: 100px;
+    border: 1px solid black;
+}

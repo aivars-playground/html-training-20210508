@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css-styles-selector.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>attribute selectors</h1>
+    <h3>this heading and div item in Latvian language should have a border</h3>
+    <div lang="lv">paraugs</div>
+    <div lang="en">sample</div>
+    <div class="special">special</div>
+    
+    <p lang="lv">texts in Latvian should have a different color</p>
+
+    <h1>child selector</h1>
+    <div class="tutorial">
+        <p>this text should have bigger font</p>
+    </div>
+    <div>
+        <p>this text should have standard font</p>
+    </div>
+    <span class="tutorial">
+        <p>this text should have bigger font as well</p>
+    </span>  
+
+    <h1>inline/block</h1>
+    <div class="withBorder">block div 1, whole line, with width</div>
+    <div class="withBorder">block div 1 on next line, with width</div>
+    <hr>
+    <div class="inlineElem">inline div 1 new line, width ignored</div>
+    <div class="inlineElem">inline div 2 same line, width ignored (as span)</div>
+    <hr>
+    <div class="inlineBlockElem">inline block div 1 new line, with width, no space above</div>
+    <div class="inlineBlockElem">inline block div 2 same line, with width</div>
+    <hr>
+    <span class="withBorder">span with border</span>
+    <span class="withBorder">another span with border</span>
+    <hr>
+    <span class="blockElem">block span</span>
+    <span class="blockElem">another block span (as div)</span>
+    <hr>
+    <span class="inlineBlockElem">inline block span</span>
+    <span class="inlineBlockElem">another  inline block span</span>
+</body>
+</html>
