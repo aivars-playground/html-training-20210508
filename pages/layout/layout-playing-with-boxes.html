@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .defaultBox{
+            background-color: aquamarine;
+            width: 400px;
+            height: 100px;
+        }
+        .withPadding{
+            padding: 25px;
+        }
+        .withMargin{
+            margin: 25px;
+        }
+        .withBorder{
+            border: 25px solid red;
+        }
+        .borderBox{
+            box-sizing: border-box;
+        }
+        .outlined{
+            margin: 25px;
+            outline: 25px solid green;
+        }
+        .smallBorder {
+            border: 2px solid red;
+        }
+        .tableItem {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            outline: 1px solid black;
+            margin-top: 1px;
+            margin-right: 1px;
+        }
+        .smallShadow {
+            box-shadow: 0px 0px 0px 2px black inset
+        }
+    </style>
+</head>
+<body>
+    <h1>fun with box sizes (400px x 100px)</h1>
+    <div class="defaultBox">defaultBox</div>
+    <div class="defaultBox withPadding withBorder borderBox">padded border border-box</div>
+    <div class="defaultBox withPadding withBorder">padded border border-box</div>
+
+    <div class="defaultBox withPadding withBorder withMargin borderBox">padded border withMargin border-box</div>
+    <div class="defaultBox withPadding withBorder withMargin">padded border withMargin</div>
+    
+    <h1>overlapping outline</h1>
+    <div class="defaultBox outlined withPadding smallBorder borderBox">outlined smallBorder borderBox</div>
+    <div class="defaultBox outlined withPadding borderBox">outlined borderBox, outlines overlapp</div>
+
+    <h1>shadows as borders</h1>
+
+    <div class="tableOuter">
+    <div><div class="tableItem">a1</div><div class="tableItem">b1</div><div class="tableItem">c1</div></div>
+    <div><div class="tableItem smallShadow">a2</div><div class="tableItem">b2</div><div class="tableItem">c2</div></div>
+    <div><div class="tableItem">a3</div><div class="tableItem">b3</div><div class="tableItem">c3</div></div>
+    </div>
+</body>
+</html>
