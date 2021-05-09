@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <title>embedded javascript</title>
+    <script>
+        function doSomething() {
+            alert('doing something')
+        }
+        function askName() {
+            var result
+            var name = window.prompt("Hi, what is your name?")
+            if(name != null && name !== "") {
+                result = `Hi, ${name}!`
+            }
+            document.getElementById('greeting').innerHTML = result
+        }
+        function callAjax() {
+            var xhttp = new XMLHttpRequest()
+            xhttp.onreadystatechange = function() {
+                console.log(`state:${this.readyState} status:${this.status} txt:${this.responseText}`)
+                if(this.readyState === 4 && this.status === 200) {
+                    document.getElementById('ajaxResponse').innerHTML = this.responseText
+                }
+            }
+            xhttp.open("GET", "./embedded-js-ajax-response.txt", true)
+            xhttp.send()
+        }
+    </script>
+</head>
+<body>
+    <div onclick="alert('Hi!')">click me</div>
+    <div>
+        <span onclick="document.getElementById('dateField').innerHTML = Date()">click here to get the date:</span>
+        <span id="dateField"></span>
+    </div>
+    <div>
+        <div onclick="doSomething()">click to do something in reusable style</div>
+        <button onclick="doSomething()">and here (to do the same something)</button>
+    </div>
+    <div>
+        <div onclick="askName()">click to greet you</div>
+        <div id="greeting"></div>
+    </div>
+    <div>
+        <span onclick="callAjax()">click to call ajax:</span>
+        <span id="ajaxResponse"></span>
+    </div>
+</body>
+</html>
