@@ -18,12 +18,6 @@
         }
     </style>
     <script>
-        openInNewPage = () => {
-            let links = document.querySelectorAll(`a`)
-            links.forEach((link) => {
-                link.setAttribute(`target`,`_blank`)
-            })
-        }
         markLinks = (prefix) => {
             let links = document.querySelectorAll(`a[href^='${prefix}']`)
             links.forEach((link) =>  {
